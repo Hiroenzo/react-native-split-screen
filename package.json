@@ -37,11 +37,19 @@
   "size-limit": [
     {
       "path": "dist/react-native-split-screen.cjs.production.min.js",
-      "limit": "10 KB"
+      "limit": "25 KB",
+      "ignore": [
+        "react",
+        "react-native"
+      ]
     },
     {
       "path": "dist/react-native-split-screen.esm.js",
-      "limit": "10 KB"
+      "limit": "10 KB",
+      "ignore": [
+        "react",
+        "react-native"
+      ]
     }
   ],
   "peerDependenciesMeta": {
@@ -51,17 +59,21 @@
     "react-native-device-info": "*"
   },
   "devDependencies": {
+    "@babel/core": "^7.20.5",
+    "@babel/preset-env": "^7.1.6",
+    "@react-navigation/native": "^6.0.16",
+    "@size-limit/preset-small-lib": "^8.1.0",
+    "@size-limit/webpack": "^8.1.0",
+    "@size-limit/webpack-why": "^8.1.0",
     "@types/react": "^18.0.21",
     "@types/react-native": "^0.70.6",
-    "@react-navigation/native": "^6.0.16",
-    "react": "^18.1.0",
-    "react-native": "^0.70.6",
-    "react-native-device-info": "^10.3.0",
-    "@size-limit/preset-small-lib": "^8.1.0",
     "husky": "^8.0.2",
+    "react": "18.1.0",
+    "react-native": "0.70.6",
     "size-limit": "^8.1.0",
     "tsdx": "^0.14.1",
     "tslib": "^2.4.1",
-    "typescript": "^4.9.4"
+    "typescript": "^4.9.4",
+    "webpack": "^5.0.0"
   }
 }
