@@ -2,8 +2,8 @@ import React from "react";
 import {StyleSheet, View, ViewStyle} from "react-native";
 
 type SplitViewType = {
-    master: React.ReactElement
-    detail: React.ReactElement
+    master: React.ReactElement | undefined
+    detail: React.ReactElement | undefined
     containerStyle?: ViewStyle,
     masterStyle?: ViewStyle,
     detailStyle?: ViewStyle,

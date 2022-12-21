@@ -2,7 +2,7 @@ import React from "react";
 import { BackHandler, Platform } from "react-native";
 import type { NavigationProp, RouteProp } from "@react-navigation/core/src/types";
 
-import { useIsTablet } from "../index";
+import { useIsTablet } from "./tableContext";
 
 type SystemBackType = {
   navigation: NavigationProp<any>
