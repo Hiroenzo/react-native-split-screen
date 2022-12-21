@@ -49,3 +49,35 @@ const SplitViewDetail: React.FC<{ navigation: any }> = ({ navigation }) => {
   )
 }
 ```
+合并之后的页面：
+
+```javascript
+import { SplitView, useIsTablet } from 'react-native-split-screen'
+
+const SplitViewScreen = () => {
+  // 判断当前是否为平板
+  const [isTablet] = useIsTablet()
+
+  /**
+   * 平板模式下采用分屏显示：
+   * 左侧为主路由，一般为列表页，右侧为子路由，一般为详情页；
+   * 非平板模式只显示主路由；
+   * @param target       主路由名称
+   * @param extendTarget 扩展路由名称 *注：需要将默认子路由注册到主路由的扩展路由里
+   */
+  return isTablet ? (
+    <SplitView
+      master={
+        <RegisterStack
+          isMaster
+          target={'SplitViewMaster'}
+          extendTarget={['SplitViewDetail', ...otherRoute]}
+        />
+      }
+      detail={<RegisterStack target={'SplitViewDetail'} extendTarget={[...otherRoute]} />}
+    />
+  ) : (
+    <RegisterStack isMaster target={'SplitViewMaster'} extendTarget={['SplitViewDetail', ...otherRoute]} />
+  )
+}
+```
