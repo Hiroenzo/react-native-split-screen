@@ -1,4 +1,5 @@
 import React from 'react';
+import { ViewStyle } from 'react-native';
 
 import DefaultView from './libs/splitView';
 
@@ -10,6 +11,9 @@ export const SplitView = (
     detail:
       | React.ReactElement<any, string | React.JSXElementConstructor<any>>
       | undefined;
+    containerStyle?: ViewStyle;
+    masterStyle?: ViewStyle;
+    detailStyle?: ViewStyle;
   }
 ) => <DefaultView {...props} />;
 

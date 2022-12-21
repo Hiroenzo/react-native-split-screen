@@ -1,16 +1,25 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, ViewStyle } from 'react-native';
 
 type SplitViewType = {
   master: React.ReactElement | undefined;
   detail: React.ReactElement | undefined;
+  containerStyle?: ViewStyle;
+  masterStyle?: ViewStyle;
+  detailStyle?: ViewStyle;
 };
 
-const SplitView = ({ master, detail }: SplitViewType) => {
+const SplitView = ({
+  master,
+  detail,
+  containerStyle,
+  masterStyle,
+  detailStyle,
+}: SplitViewType) => {
   return (
-    <View style={styles.container}>
-      <View style={styles.masterView}>{master}</View>
-      <View style={styles.detailView}>{detail}</View>
+    <View style={[styles.container, containerStyle]}>
+      <View style={[styles.masterView, masterStyle]}>{master}</View>
+      <View style={[styles.detailView, detailStyle]}>{detail}</View>
     </View>
   );
 };
