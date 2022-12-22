@@ -1,5 +1,7 @@
 # react-native-split-screen
 
+![预览图](https://s3.bmp.ovh/imgs/2022/12/22/602e25854a2ff0af.gif)
+
 基于 [retyui](https://github.com/retyui) 的 [react-native-split-view-demo](https://github.com/retyui/react-native-split-view-demo) 提取和整理代码；
 
 项目依赖于 [react-navigation](https://github.com/react-navigation/react-navigation)，分屏采用两个路由栈实现：
@@ -35,7 +37,6 @@ export const Index = () => {
             </NavigationContainer>
         </TabletContextProvider>
     )
-    
 }
 ```
 
