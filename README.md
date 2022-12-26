@@ -11,15 +11,21 @@ import { setMasterNavigator, setDetailNavigator } from 'react-native-split-scree
 
 // 注册不同的路由栈
 export const RegisterStack = ({ isMaster, target, extendTarget }: ScreenStackType) => {
-    return (
-        <NavigationContainer independent ref={isMaster ? setMasterNavigator : setDetailNavigator}>
-            <Stack.Navigator initialRouteName={target} screenOptions={{ headerBackTitleVisible: false }}>
-                {Object.entries(RegisterScreen(screens, [target, ...extendTarget])).map(([key, value]) => (
-                    <Stack.Screen key={key} name={key} component={value} />
-                ))}
-            </Stack.Navigator>
-        </NavigationContainer>
-    )
+  return (
+    <NavigationContainer
+      independent
+      ref={isMaster ? setMasterNavigator : setDetailNavigator}
+    >
+      <Stack.Navigator
+        initialRouteName={target}
+        screenOptions={{ headerBackTitleVisible: false }}
+      >
+        {Object.entries(RegisterScreen(screens, [target, ...extendTarget])).map(([key, value]) => (
+          <Stack.Screen key={key} name={key} component={value} />
+        ))}
+      </Stack.Navigator>
+    </NavigationContainer>
+  )
 }
 ```
 
@@ -29,14 +35,14 @@ export const RegisterStack = ({ isMaster, target, extendTarget }: ScreenStackTyp
 import { isTablet } from 'react-native-device-info'
 
 export const Index = () => {
-    const _isTablet = isTablet()
-    return (
-        <TabletContextProvider isTablet={_isTablet}>
-            <NavigationContainer>
-                ...
-            </NavigationContainer>
-        </TabletContextProvider>
-    )
+  const _isTablet = isTablet()
+  return (
+    <TabletContextProvider isTablet={_isTablet}>
+      <NavigationContainer>
+        ...
+      </NavigationContainer>
+    </TabletContextProvider>
+  )
 }
 ```
 
@@ -63,7 +69,7 @@ const SplitViewMaster: React.FC<{ navigation: any }> = ({ navigation }) => {
 const SplitViewDetail: React.FC<{ navigation: any }> = ({ navigation }) => {
   return (
     <View style={styles.container}>
-        <Text>SplitViewDetailScreen</Text>
+      <Text>SplitViewDetailScreen</Text>
     </View>
   )
 }
