@@ -1,11 +1,20 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist",
     "src"
+  ],
+  "keywords": [
+    "react-native",
+    "android",
+    "ios",
+    "react-navigation",
+    "navigation",
+    "split",
+    "split-screen"
   ],
   "engines": {
     "node": ">=14"
