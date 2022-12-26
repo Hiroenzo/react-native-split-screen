@@ -1,5 +1,5 @@
 {
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -16,6 +16,14 @@
     "split",
     "split-screen"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hiroenzo/react-native-split-screen.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Hiroenzo/react-native-split-screen/issues"
+  },
+  "homepage": "https://github.com/Hiroenzo/react-native-split-screen",
   "engines": {
     "node": ">=14"
   },
